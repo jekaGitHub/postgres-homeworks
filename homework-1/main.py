@@ -37,5 +37,7 @@ try:
                         "INSERT INTO orders (order_id, customer_id, employee_id, order_date, ship_city) VALUES (%s, %s, %s, %s, %s)", order)
                 cur.execute("SELECT * FROM orders")
                 rows = cur.fetchall()
+
+    conn.commit()
 finally:
     conn.close()

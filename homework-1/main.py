@@ -12,7 +12,7 @@ try:
                 next(employees)
                 for employee in employees:
                     cur.execute(
-                        "INSERT INTO employees (employee_id, first_name, last_name, title, birth_date, notes) VALUES (%s, %s, %s, %s, %s)", employee)
+                        "INSERT INTO employees (employee_id, first_name, last_name, title, birth_date, notes) VALUES (%s, %s, %s, %s, %s, %s)", employee)
                 cur.execute("SELECT * FROM employees")
                 rows = cur.fetchall()
 
